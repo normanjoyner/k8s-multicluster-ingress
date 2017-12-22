@@ -261,7 +261,7 @@ func formatLoadBalancersList(balancers []status.LoadBalancerStatus) (string, err
 	if len(balancers) == 0 {
 		return "No multicluster ingresses found.", nil
 	}
-	var result string = "List of multicluster ingresses created:\nName; IP; Clusters\n"
+	var result string = "List of multicluster ingresses created:\n"
 	for _, lbStatus := range balancers {
 		result += "Name: " + lbStatus.LoadBalancerName
 		result += "\tIP: " + lbStatus.IPAddress
